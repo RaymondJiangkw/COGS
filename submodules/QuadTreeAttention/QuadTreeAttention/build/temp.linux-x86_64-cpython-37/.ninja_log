@@ -1,0 +1,5 @@
+# ninja log v5
+0	10048	1717984052310162190	/media/kevin/data/Output/01.WRIVA/Code/COGS/submodules/QuadTreeAttention/QuadTreeAttention/build/temp.linux-x86_64-cpython-37/QuadtreeAttention/src/score_computation.o	41e01bdd1d4f880c
+1	31633	1717984073902420642	/media/kevin/data/Output/01.WRIVA/Code/COGS/submodules/QuadTreeAttention/QuadTreeAttention/build/temp.linux-x86_64-cpython-37/QuadtreeAttention/src/score_computation_kernal.o	5f1203a4b8955b1
+0	9984	1717984084150543308	/media/kevin/data/Output/01.WRIVA/Code/COGS/submodules/QuadTreeAttention/QuadTreeAttention/build/temp.linux-x86_64-cpython-37/QuadtreeAttention/src/value_aggregation.o	626e4e114ba45aaf
+0	29861	1717984104038781369	/media/kevin/data/Output/01.WRIVA/Code/COGS/submodules/QuadTreeAttention/QuadTreeAttention/build/temp.linux-x86_64-cpython-37/QuadtreeAttention/src/value_aggregation_kernel.o	ad84749c81e6e43f

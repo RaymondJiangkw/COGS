@@ -1,0 +1,9 @@
+# ninja log v5
+0	14692	1702727649939537661	/media/kevin/data/Output/01.WRIVA/Code/01.GaussianSplatting/submodules/QuadTreeAttention/QuadTreeAttention/build/temp.linux-x86_64-cpython-311/QuadtreeAttention/src/score_computation.o	e40e6e23720ad5a2
+0	36186	1702727671443823879	/media/kevin/data/Output/01.WRIVA/Code/01.GaussianSplatting/submodules/QuadTreeAttention/QuadTreeAttention/build/temp.linux-x86_64-cpython-311/QuadtreeAttention/src/score_computation_kernal.o	326cd33af98189c1
+2	14564	1702727686284020994	/media/kevin/data/Output/01.WRIVA/Code/01.GaussianSplatting/submodules/QuadTreeAttention/QuadTreeAttention/build/temp.linux-x86_64-cpython-311/QuadtreeAttention/src/value_aggregation.o	323bfc8c9a00e3f5
+2	33769	1702727705496275706	/media/kevin/data/Output/01.WRIVA/Code/01.GaussianSplatting/submodules/QuadTreeAttention/QuadTreeAttention/build/temp.linux-x86_64-cpython-311/QuadtreeAttention/src/value_aggregation_kernel.o	2dc72a6a7665aef1
+0	15421	1717996821940935973	/media/kevin/data/Output/01.WRIVA/Code/COGS/submodules/QuadTreeAttention/QuadTreeAttention/build/temp.linux-x86_64-cpython-311/QuadtreeAttention/src/score_computation.o	8baa17abf670709
+0	39454	1717996845977276663	/media/kevin/data/Output/01.WRIVA/Code/COGS/submodules/QuadTreeAttention/QuadTreeAttention/build/temp.linux-x86_64-cpython-311/QuadtreeAttention/src/score_computation_kernal.o	361e0face0692645
+0	15388	1717996861621497557	/media/kevin/data/Output/01.WRIVA/Code/COGS/submodules/QuadTreeAttention/QuadTreeAttention/build/temp.linux-x86_64-cpython-311/QuadtreeAttention/src/value_aggregation.o	56c701588e1bc0bc
+0	36784	1717996883017798631	/media/kevin/data/Output/01.WRIVA/Code/COGS/submodules/QuadTreeAttention/QuadTreeAttention/build/temp.linux-x86_64-cpython-311/QuadtreeAttention/src/value_aggregation_kernel.o	da267a41813e2b82

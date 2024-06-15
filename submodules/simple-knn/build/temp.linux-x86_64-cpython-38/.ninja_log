@@ -1,0 +1,7 @@
+# ninja log v5
+0	8469	1711560951967467406	/media/kevin/data/Output/01.WRIVA/Code/01.GaussianSplatting/submodules/simple-knn/build/temp.linux-x86_64-cpython-38/simple_knn.o	d0d85d36997b1afd
+0	16195	1711560959679565512	/media/kevin/data/Output/01.WRIVA/Code/01.GaussianSplatting/submodules/simple-knn/build/temp.linux-x86_64-cpython-38/ext.o	418ba00b527a0030
+0	40040	1711560983523868813	/media/kevin/data/Output/01.WRIVA/Code/01.GaussianSplatting/submodules/simple-knn/build/temp.linux-x86_64-cpython-38/spatial.o	18fed57fb7046331
+71	7867	1711908524107979533	/media/kevin/data/Output/01.WRIVA/Code/01.GaussianSplatting/submodules/simple-knn/build/temp.linux-x86_64-cpython-38/simple_knn.o	3193203d2ae4a8ee
+71	15821	1711908532048070369	/media/kevin/data/Output/01.WRIVA/Code/01.GaussianSplatting/submodules/simple-knn/build/temp.linux-x86_64-cpython-38/ext.o	89875ca286dabec2
+71	35851	1711908552084299760	/media/kevin/data/Output/01.WRIVA/Code/01.GaussianSplatting/submodules/simple-knn/build/temp.linux-x86_64-cpython-38/spatial.o	4bb7e120f93099a5

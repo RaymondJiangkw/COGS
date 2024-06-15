@@ -1,0 +1,17 @@
+accelerate
+diffusers==0.20.1
+h5py
+matplotlib
+numpy==1.26.1
+omegaconf
+opencv-python
+scipy==1.11.3
+tensorboard
+torch==2.0.1
+torchaudio==2.0.2
+torchvision==0.15.2
+tqdm
+transformers==4.32.1
+triton==2.0.0
+wandb==0.14.0
+xformers==0.0.21

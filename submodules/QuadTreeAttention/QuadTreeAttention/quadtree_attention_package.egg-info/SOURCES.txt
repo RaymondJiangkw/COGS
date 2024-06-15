@@ -1,0 +1,9 @@
+setup.py
+QuadtreeAttention/src/score_computation.cpp
+QuadtreeAttention/src/score_computation_kernal.cu
+QuadtreeAttention/src/value_aggregation.cpp
+QuadtreeAttention/src/value_aggregation_kernel.cu
+quadtree_attention_package.egg-info/PKG-INFO
+quadtree_attention_package.egg-info/SOURCES.txt
+quadtree_attention_package.egg-info/dependency_links.txt
+quadtree_attention_package.egg-info/top_level.txt

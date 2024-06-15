@@ -1,0 +1,6 @@
+*.ckpt
+*.pth
+dataset
+output
+.ipynb_checkpoints
+_demo.ipynb

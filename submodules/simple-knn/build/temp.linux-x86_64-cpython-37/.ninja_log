@@ -1,0 +1,4 @@
+# ninja log v5
+0	7163	1717983677061671657	/media/kevin/data/Output/01.WRIVA/Code/COGS/submodules/simple-knn/build/temp.linux-x86_64-cpython-37/simple_knn.o	163bdf83ea60b8a5
+0	10153	1717983680049707405	/media/kevin/data/Output/01.WRIVA/Code/COGS/submodules/simple-knn/build/temp.linux-x86_64-cpython-37/ext.o	8604cffc214c79e2
+0	29677	1717983699577941035	/media/kevin/data/Output/01.WRIVA/Code/COGS/submodules/simple-knn/build/temp.linux-x86_64-cpython-37/spatial.o	4bbf05a7bf55d41
