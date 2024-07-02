@@ -67,7 +67,10 @@ __device__ glm::vec3 computeColorFromSH(int idx, int deg, int max_coeffs, const 
 	clamped[3 * idx + 0] = (result.x < 0);
 	clamped[3 * idx + 1] = (result.y < 0);
 	clamped[3 * idx + 2] = (result.z < 0);
-	return glm::max(result, 0.0f);
+	result.x = max(result.x, 0.0f);
+	result.y = max(result.y, 0.0f);
+	result.z = max(result.z, 0.0f);
+	return result;
 }
 
 // Forward version of 2D covariance matrix computation
