@@ -45,6 +45,34 @@ To train a scene, after preprocessing, please use
 ```bash
 python train.py -s <path to the dataset> --eval --num_images <number of trainig views>
 ```
+<details>
+<summary><span style="font-weight: bold;">Interface for available training options (you can find default values in the 'arguments/__init__.py'):</span></summary>
+
+Options used for constructing a coarse solution:
+
+| Argument | Type | Description |
+|:--------:|:----:|:-----------:|
+| `rotation_finetune_lr` | `float` | Learning rate for the quaternion of camera |
+| `translation_finetune_lr` | `float` | Learning rate for the translation of camera |
+| `scale_finetune_lr` | `float` | Learning rate for the scaling per primitive for aligning the monocular depth |
+| `shift_finetune_lr` | `float` | Learning rate for the translation per primitive for aligning the monocular depth |
+| `register_steps` | `int` | Number of optimization steps for registering the camera pose |
+| `align_steps` | `int` | Number of optimization steps for adjusting both the camera pose and monocular depth |
+
+Options used for refinement:
+
+| Argument | Type | Description |
+|:--------:|:----:|:-----------:|
+| `iterations` | `int` | Number of iterations for optimization. If this is changed, other relevant options should also be adjusted. |
+| `depth_diff_tolerance` | `int` | Threshold of difference between aligned depth and rendered depth to be considered as unobserved regions |
+| `farest_percent` | `float` | Percent of retained number of points after farest point down-sampling |
+| `retain_percent` | `float` | Percent of retained number of points after uniform down-sampling |
+| `add_frame_interval` | `int` | Interval of training views which are back-projected after registration and adjustment |
+| `scale_and_shift_mode` | `'mask'` or `'whole'` | Align the monocular depth either per primitive based on mask, or as a whole |
+
+Other hyper-parameters should be self-explaining.
+
+</details>
 
 ### Testing
 After a scene is trained, please first use
