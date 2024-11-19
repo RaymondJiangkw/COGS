@@ -4,3 +4,8 @@ dataset
 output
 .ipynb_checkpoints
 _demo.ipynb
+eval_tnt.py
+eval_tnt.sh
+train_fast.py
+train_tnt.sh
+debug

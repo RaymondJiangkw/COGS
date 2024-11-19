@@ -66,7 +66,7 @@ def render_tensor(img: torch.Tensor, normalize: bool = False, nrow: int = 8) -> 
     elif len(img.shape) == 4:
         return Image.fromarray((make_grid(img, nrow=nrow).permute(1, 2, 0).cpu().numpy() * 255).astype(np.uint8))
 
-def register(dataset, opt, pipe, load_iteration, eval_pose):
+def register(dataset, opt, pipe, load_iteration, eval_pose, rgb_only):
     load_iteration = dataset.load_iteration
     dataset = read_cfg(dataset.model_path)
     dataset.load_iteration = load_iteration
@@ -128,8 +128,9 @@ def register(dataset, opt, pipe, load_iteration, eval_pose):
             xy1 = F.grid_sample(norm_xy(test_out["xy"])[None], 
                     kp1[None, None], mode='bilinear', align_corners=False).reshape(2, -1).permute(1, 0)
             
-            loss = torch.nn.L1Loss()(test_view.image, test_out["render"].clamp(0, 1)) + \
-                1e2 * torch.nn.L1Loss()(xy0, xy1)
+            loss = torch.nn.L1Loss()(test_view.image, test_out["render"].clamp(0, 1)) 
+            if not rgb_only:
+                loss = loss + 1e2 * torch.nn.L1Loss()(xy0, xy1)
             
             loss.backward()
             optimizer.step()
@@ -152,9 +153,10 @@ if __name__ == "__main__":
     op = OptimizationParams(parser)
     pp = PipelineParams(parser)
     parser.add_argument("--eval_pose", action='store_true', help="Evaluate the pose metrics.")
+    parser.add_argument("--rgb_only", action='store_true', help="Only use the RGB loss to optimize the test poses.")
     args = parser.parse_args(sys.argv[1:])
     print("Registering testing views of " + args.model_path)
-    register(lp.extract(args), op.extract(args), pp.extract(args), args.load_iteration, args.eval_pose)
+    register(lp.extract(args), op.extract(args), pp.extract(args), args.load_iteration, args.eval_pose, args.rgb_only)
 
     # All done
     print("Register complete.")

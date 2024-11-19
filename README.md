@@ -81,6 +81,12 @@ python eval.py -m <path to the saved model> --load_iteration <load iteration>
 ```
 to estimate the extrinsics of testing views. If ground-truth extrinsics are provided, it will calculate the metrics of estimated extrinsics of training views as well.
 
+For the Hiking dataset, we use
+```bash
+python eval.py -m <path to the saved model> --load_iteration <load iteration> --rgb_only
+```
+to estimate the extrinsics of testing views.
+
 After registering the testing views, please use `render.py` and `metrics.py` to evaluate the novel view synthesis performance.
 
 ### Tips
