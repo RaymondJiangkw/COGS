@@ -189,8 +189,17 @@ def readSceneInfo(path, eval, llffhold=8, num_images=-1):
         from math import floor
         length = len(cam_infos)
         interval = floor((length - num_images) / (num_images - 1))
-        train_cam_infos = [c for idx, c in enumerate(cam_infos) if idx % (interval + 1) == 0]
-        train_cam_infos[-1] = cam_infos[-1] # Ensure last frame is covered
+        while True:
+            train_cam_infos = [c for idx, c in enumerate(cam_infos) if idx % (interval + 1) == 0]
+            if len(train_cam_infos) > num_images:
+                interval += 1
+            else:
+                break
+        # Ensure last frame is covered
+        if len(train_cam_infos) == num_images - 1:
+            train_cam_infos.append(cam_infos[-1])
+        else:
+            train_cam_infos[-1] = cam_infos[-1]
         assert len(train_cam_infos) == num_images
         train_cam_image_name_s = {c.image_name: 1 for c in train_cam_infos}
         test_cam_infos = [c for idx, c in enumerate(cam_infos) if not (c.image_name in train_cam_image_name_s)]
