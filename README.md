@@ -27,7 +27,7 @@ We provide a quick [demo](./demo.ipynb) for you to play with.
 
 ### Dataset Preparation
 - For Tanks & Temples Dataset, please refer to [NoPe-NeRF](https://github.com/ActiveVisionLab/nope-nerf/) for downloading. You will then need to run `convert.py` to estimate the intrinsics and ground-truth extrinsics for evaluation.
-- For Hiking Dataset, please refer to [LocalRF](https://github.com/facebookresearch/localrf) for downloading. We truncate each scene to keep first 50 frames such that 3 training views can cover the whole scene. You will then need to run `convert.py` to estimate the intrinsics and ground-truth extrinsics for evaluation.
+- For Hiking Dataset, please refer to [LocalRF](https://github.com/facebookresearch/localrf) for downloading. We use `Forest1`, `Playground`, `University2`, `University3`, and `Garden2` these five scenes in our experiments. We truncate each scene to keep first 50 frames such that 3 training views can cover the whole scene. You will then need to run `convert.py` to estimate the intrinsics and ground-truth extrinsics for evaluation.
 - For your own dataset, you need to provide the intrinsics, and notice that our model assumes all views share the same intrinsics as well. You need to prepare the data under the following structure:
 ```
 - images/                       -- Directory containing your images
